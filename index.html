@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit" />
+  <meta name="description" content="vue3个人博客" />
+  <meta name="keywords" content="vue3 vue3博客 vite 斯汪の博客" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <title>斯汪の博客</title>
+  <link rel="icon" href="https://www.freeimg.cn/i/2024/01/31/65ba39b262323.png" />
+</head>
+
+<body>
+<div id="app">
+  <div class="app-loading">
+    <div class="app-loading-wrap">
+      <img style="width: 100px; height: 100px" src="https://www.freeimg.cn/i/2024/01/31/65ba39b262323.png" alt="Logo" />
+      <div class="circle-0 circle-run"></div>
+      <div class="circle-1 circle-run"></div>
+      <div class="circle-2 circle-run"></div>
+    </div>
+    <svg width="350" height="120">
+      <defs>
+        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#4CAF50"></stop>
+          <stop offset="50%" stop-color="#FFC107"></stop>
+          <stop offset="100%" stop-color="#2196F3"></stop>
+        </linearGradient>
+      </defs>
+      <text x="45" y="115" fill="url(#linear)" font-family="Arial" font-size="48" font-weight="bold">
+        斯汪の博客
+      </text>
+    </svg>
+
+  </div>
+
+</div>
+
+<style>
+  .app-loading {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white !important;
+  }
+
+  .app-loading .app-loading-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* 定义圆形元素的基本样式 */
+  .circle-run {
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  /* 第一个圆形元素样式，顺时针旋转 */
+  .circle-0 {
+    width: 140px;
+    height: 140px;
+    border-left-color: #ff4111;
+    border-right-color: #ffeb38;
+    animation-name: rotate-clockwise;
+  }
+
+  /* 第二个圆形元素样式，逆时针旋转 */
+  .circle-1 {
+    width: 180px;
+    height: 180px;
+    border-top-color: #14b8a6;
+    border-bottom-color: #3bdfee;
+    animation-name: rotate-counterclockwise;
+  }
+
+  /* 第三个圆形元素样式，交替缩放 */
+  .circle-2 {
+    width: 180px;
+    height: 180px;
+    border-left-color: #53ff6a;
+    border-right-color: #ff41c6;
+    animation-name: rotate-alternate;
+  }
+
+  /* 定义顺时针旋转动画 */
+  @keyframes rotate-clockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* 定义逆时针旋转动画 */
+  @keyframes rotate-counterclockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+
+  /* 定义交替缩放动画 */
+  @keyframes rotate-alternate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+</style>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+# root = true：表示这个文件是顶级的，不会继承上层目录的 .editorconfig 文件的配置。
+root = true
+
+# 所有文件设置字符集为 UTF-8,设置行尾符为 LF（换行符）,设置最大行长度为 100 个字符,
+[*]
+charset=utf-8
+end_of_line=lf
+insert_final_newline=true
+indent_style=space
+indent_size=2
+max_line_length = 100
+
+
+# 匹配所有以 .yml、.yaml 和 .json 结尾的文件在文件末尾插入一个空行,设置缩进大小为 2 个空格
+[*.{yml,yaml,json}]
+indent_style = space
+indent_size = 2
+
+
+# 禁止删除行尾的空格。
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
