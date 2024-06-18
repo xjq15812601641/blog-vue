@@ -64,8 +64,7 @@
   const toExternalLink = (key: string) => {
     const externalLinkMap = {
       BiliBili: 'https://space.bilibili.com/616054475',
-      gitea: 'https://git.shizuka.icu/ajuna/blog2.0.git',
-      github: 'https://github.com/MSshizuka/blog2.0',
+      github: 'https://github.com/xjq15812601641/blog-vue',
     };
     window.open(externalLinkMap[key], '_blank');
   };
